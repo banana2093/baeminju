@@ -1,16 +1,19 @@
-[ 자바 기반 풀스택 개발자 과정 - 기본전달사항 ]!!!!!!!!!!!
+[ 자바 기반 풀스택 개발자 과정 - 기본전달사항 ]
 탐쌤이멜: tombap@naver.com
 
-1. 교재: NCS 5권
+-> 데일리 미션 주소:
+https://drive.google.com/drive/folders/1P-suVVa6anWBdieLX4QzaZe1rkEsivz6?usp=sharing
+
+1. 교재: 5권
 
 2. 시험: 과목별 평가(각 과목이 끝나는날)
 
-3. 공식교과서: w3c 스쿨!!!!!!
+3. 공식교과서: w3c 스쿨
 https://www.w3schools.com/
 
 4. 소스 빌드용 폴더 생성하기!
 
-5. 강의 동영상 백업 유튜브: 자바 기반 풀스택 개발자 과정!!!!!!
+5. 강의 동영상 백업 유튜브: 자바 기반 풀스택 개발자 과정
 https://www.youtube.com/channel/UCdHkJVwwhMzlza-iRYIgc5A
 
 6. 소스 깃허브 : GITA-FSD-JD22
@@ -33,7 +36,7 @@ https://www.awwwards.com/
 (1) 닷홈: 회원가입 후 무료호스팅하기!
 https://www.dothome.co.kr/
 
-(2) 깃허브: 회원가입 후 레파지토리 만들기!!
+(2) 깃허브: 회원가입 후 레파지토리 만들기!
 https://github.com/
 
 9. 포트폴리오
