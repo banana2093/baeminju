@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-    <title>네이버 요약 뉴스</title>
+    <title>네이버 요약 뉴스-사회</title>
     <!-- 구글 웹폰트 불러오기(CDM) -->
     <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Nanum+Gothic&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
     <!--스타일시트 인터널방식-->
-
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
     <!--1.상단영역-->
     <header class="part top">
         <!--1-1.타이틀-->
-        <h1>네이버 요약뉴스</h1>
+        <h1>네이버 요약뉴스-사회</h1>
 
         <!--1-2.GNB: Global Nabigation Bar -->
         <div id="gnb">
@@ -38,9 +36,18 @@
 
     <!--2.메인영역-->
     <main class="part main">
-
-        <!--메인이미지-->
-        <img src="./images/newsilust.jfif" alt="메인뉴스 일러스트 이미지">
+        <!-- 2-1. 언론사로고 -->
+        <div class="prlogo"></div>
+        <!-- 2-2. 기사 제목 -->
+        <h2 class="atit"></h2>
+        <!-- 2-3. 기사 사진(+사진설명)-->
+        <figure class="afig"></figure>
+        <!-- 2-4. 기사 내용 -->
+        <section class="arti"></section>
+        <!-- 2-5. 기자정보 -->
+        <div class="rinfo"></div>
+        <!-- 2-6. 기사원문 -->
+        <h5 class="org"><a href="" target="_blank">기사원문</a></h5>
     </main>
 
     <!--3.하단영역-->
@@ -124,7 +131,7 @@
         [ title 속성]
         -툴팁을 나오게 하는 속성임
         -값으로 메시지를 넣으면 마우스 오버시 툴팁으로 메시직 보인다
-        -어떤 요소에도 필요하면 사용가능함.
+        -어떤 요소에도 필요하면 사용가능함
 
 -->
 
