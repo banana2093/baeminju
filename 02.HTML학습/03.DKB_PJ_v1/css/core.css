@@ -2,25 +2,58 @@
 /* 도깨비 PJ 공통클래스/웹폰트 CSS - core.css */
 
 /* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Single+Day&family=Yeon+Sung&family=ZCOOL+QingKe+HuangYou&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap');
 /* 
-    font-family: 'Single Day', cursive;
-    font-family: 'Yeon Sung', cursive;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
+   1. 캐릭터 설명 제목체
+     font-family: 'Nanum Myeongjo', serif;
+
+   2.캐릭터 설명 내용체
+    font-family: 'Noto Sans KR', sans-serif;
+
+    3. 한자
+    font-family: 'Noto Serif SC', serif;
+
+   4. 전체 공통체(메뉴 등)
     font-family: 'Nanum Gothic', sans-serif;
+  
 */
 
 /* 전체 웹폰트 일반적용 */
-body{
+body {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* 속박스 class */
-.ibx{
+.ibx {
     max-width: 1200px;
     /* 최대가로크기 1200px 이면
     싸고 있는 박스가 이것보다 작아질 경우
     auto로 자동전환되어 가로스크롤이 안생김 */
     margin: 0 auto;
+}
 
+
+
+.scbar::-webkit-scrollbar {
+    /* 전체 스크롤바 크기설정 */
+    width: 7px;
+}
+
+
+/* 스크롤바 디자인 클래스}
+weckit- (벤터사명(크롬, 사파리)) 접두어
+)참고: -m*-(ie_,  -o(오페라), -moz파이어폭스*/
+.scbar::-webkit-scrollbar-thumb {
+    /* 스크롤바 */
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.scbar::-webkit-scrollbar-track {
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
 }
