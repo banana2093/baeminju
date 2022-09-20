@@ -1,10 +1,19 @@
 @charset "utf-8";
 /* 로봇 PJ CSS -robot.css */
 
+
+
+
+
+
+
+
+
+
 /* 공사중표시 */
-body * {
+/* body * {
     outline: 2px dashed lime;
-}
+} */
 
 /* 초기화 */
 html,
@@ -18,6 +27,15 @@ ol {
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+    /* 내부 아이디 요소로 스크롤 위치
+    이동시 스크롤 애니메이션 처리가 되도록
+    설정하는 속성. html에 셋팅하면
+    전체 페이지 스크롤에 적요됨
+    (JS사용없이 하는 방법) */
+}
+
 
 
 /* 전체배경 */
@@ -27,6 +45,14 @@ body {
 
     /* 배경: 색이반고윙/크 */
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
+}
+
+/* 빛이나는 로봇 */
+.brRo,
+.brRo::after,
+.brRo::before {
+    /* 박스그림자: x y blur spread 색 */
+    box-shadow: 0 0 10px 5px cyan;
 }
 
 /* 공통class */
@@ -40,11 +66,117 @@ body {
     background: url(../images/metal02.jpg) no-repeat center/cover;
 }
 
+/**** 1. 상단영역 ****/
+/* 1-1.로고 */
+.logo{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    /* 글자색 */
+    color: aquamarine;
+    font: 45px/200px 'Gugi';
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    /* 글자중앙정렬 */
+    text-align: center;
+    /* 글자그림자 */
+    text-shadow: 2px 2px 5px #000;
+
+    /* 박스그림자 
+    - 내부그림자(inset) +
+    외부그림자(글로우효과)
+    */
+    box-shadow: inset 0 0 20px 5px #000,
+    0 0 20px 5px greenyellow;
+    
+
+    /* 배경풀셋팅: 색이반고윙/크 */
+    background: skyblue url(../images/robot_03.png) no-repeat center
+    10px/160px;
+}
+
+/* 1-2. 내용링크 */
+.link{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    /* 부모는?  보이는 화면 */
+}
+
+.link a{
+    /* a요소에서 글자색, 밑줄처리함 */
+    color: lawngreen;
+    text-decoration: none;
+    /* 글자: 스두크/줄체 */
+    font: 60px 'Hi Melody';
+    /* 글자그림자 */
+    text-shadow: 1px 1px 0 red, 2px 2px 2px #000;
+}
+
+.link a:hover{
+    color: red;
+    text-decoration: overline wavy;
+}
+
+/* 1-3. 위로가기버튼 */
+.btnTop{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+
+    /* button 요소는 기본 디자인에 글자중앙정렬, 세로중앙도 적용됨 */
+
+    /* 배경색(원래기본색있음) */
+    background-color: #ccc;
+    /* 둥근모서리 원 */
+    border-radius: 50%;
+    /* 테두리 */
+    border: 5px outset #fff;
+}
+/*  버튼 a요소 */
+.btnTop a{
+    display: block;
+    /* 크기디자인위해 블록화 */
+
+    /* 크기를 버튼박스에 맞춤 */
+    width: 100%;
+    height: 100%;
+    color: green;
+    /* 글자: 스두크/줄체 */
+    font: 30px/90px 'Black Ops One';
+/* 
+line-height가 높이값인 100px
+이 아니고 90px인 이유는?
+버튼요소가 기본적으로
+box-sizing:border-box임
+이것은 패딩과 보더가
+내부에 포함됨
+보더크기가 5px이므로
+높이값 100px안에 5px+5px=10px
+이 포함되어서 10px을 뺀
+90px로 설정함. 
+*/
+/* 밑줄없앰 */
+text-decoration: none;
+}
+/* 위로가기 버튼 오버시 */
+.btnTop:hover{
+    background-color: red;
+    border-style: inset;
+}
+/* 글자관련은 a요소에 변경 */
+.btnTop:hover a{
+    color: yellow;
+}
+
 /* 2-1. 로봇박스 */
 .robx {
     /* 패딩 위,아래 */
     padding: 200px 0 400px;
-
 }
 
 /* 2-1-1.로봇머리 */
@@ -100,9 +232,9 @@ body {
     width: 50px;
     height: 70px;
     background: url(../images/nose.jpg) no-repeat 0/110% 100%;
-    /* 둥근모서리 */    
+    /* 둥근모서리 */
     /* border-radius: 30px; */
-    clip-path: polygon(36% 10%,69% 10%,80% 60%,94% 70%,86% 90%,18% 90%,8% 74%,20% 60%);
+    clip-path: polygon(36% 10%, 69% 10%, 80% 60%, 94% 70%, 86% 90%, 18% 90%, 8% 74%, 20% 60%);
 }
 
 /* 입 */
@@ -147,11 +279,11 @@ body {
     height: 310px;
     margin: 0 auto;
     margin-top: 50px;
- 
+
 }
 
 /* 가상요소로 몸박스 하단처리 */
-.body::after{
+.body::after {
     content: '';
     display: block;
     position: absolute;
@@ -160,8 +292,8 @@ body {
     width: 104%;
     height: 120px;
     /* 선형 그라데이션 */
-    background-image: linear-gradient( skyblue, darkgreen, black);
-    clip-path: polygon(0 0,100% 0,100% 80%,70% 100%,30% 100%,0 80%);
+    background-image: linear-gradient(skyblue, darkgreen, black);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 100%, 30% 100%, 0 80%);
 }
 
 /* 목 */
@@ -193,12 +325,12 @@ body {
     height: 70px;
     border-radius: 50%;
     bottom: -25px;
-    background-image: 
-      /* linear-gradient(red,blue); */
-    /* linear-gradient(to right,red,blue); */
-    /* linear-gradient(to left,red 5%,blue 20%,blue 80%,yellow); */
-    /* linear-gradient(45deg,red,blue,yellow); */
-    radial-gradient(farthest-side at 40% 40%,white,#333);
+    background-image:
+        /* linear-gradient(red,blue); */
+        /* linear-gradient(to right,red,blue); */
+        /* linear-gradient(to left,red 5%,blue 20%,blue 80%,yellow); */
+        /* linear-gradient(45deg,red,blue,yellow); */
+        radial-gradient(farthest-side at 40% 40%, white, #333);
 }
 
 /* [배경이미지에 있다. 뭐가? 그라데이션이]
@@ -229,16 +361,17 @@ body {
 */
 
 /* 왼쪽가상요소 위치 */
-.arm.a1::before{
+.arm.a1::before {
     left: -15px;
 }
+
 /* 오른쪽가상요소 위치 */
-.arm.a2::before{
+.arm.a2::before {
     right: -15px;
 }
 
 /* 가상요소로 손그림자주기 */
-.arm::after{
+.arm::after {
     content: '';
     display: block;
     position: absolute;
@@ -258,12 +391,12 @@ body {
 
 
 /* 왼손그림자 위치 */
-.arm.a1::after{
+.arm.a1::after {
     left: 12px;
 }
 
 /* 오른손그림자 위치 */
-.arm.a2::after{
+.arm.a2::after {
     right: 12px;
 }
 
@@ -289,9 +422,9 @@ body {
 }
 
 /* 가상요소로 발 만들기 */
-.leg::after{
+.leg::after {
     content: '';
-    display: block ;
+    display: block;
     position: absolute;
     bottom: -30px;
     left: -6px;
@@ -303,7 +436,7 @@ body {
     border: 1px solid #222;
     border-bottom: 20px solid #000;
     /* 원형그라데이션 */
-    background-image: radial-gradient(farthest-side at 20px 20px, #fff,#333);
+    background-image: radial-gradient(farthest-side at 20px 20px, #fff, #333);
 }
 
 
@@ -333,7 +466,7 @@ body {
 }
 
 /* TV */
-.tv{
+.tv {
     position: absolute;
     top: 30px;
     left: 23px;
@@ -344,7 +477,7 @@ body {
 }
 
 /* 스크린 */
-.screen{
+.screen {
     position: absolute;
     top: 10px;
     left: 14px;
@@ -357,7 +490,7 @@ body {
 }
 
 /* 아이프레임 */
-.screen iframe{
+.screen iframe {
     position: absolute;
     left: -22px;
     width: 141%;
@@ -365,4 +498,135 @@ body {
     /* 기본보더없앰 */
     border: none;
     border-radius: 10px;
+}
+
+
+/*********** 2-2. 로봇설명박스 ***********/
+.dcbx {
+    /* 최대가로크기 mw */
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    /* 반투명 배경색 */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    padding: 15px 30px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    /* 박스그림자
+    - 콤마로 연결하면 다중셋팅가능
+    - inset은 내부그림자 */
+    box-shadow: inset 0 0 20px green, inset 0 0 50px 10px cyan;
+}
+
+/* 2-2-2.로봇설명 제목 */
+.dcbx h2 {
+    /* 스티키 포지션 적용 */
+    position: sticky;
+    top: 50%;
+    /* top값을 지정하면
+    보이는 화면에서 위치를 고정함 */
+
+    /* 글자체 */
+    font-family: 'Gugi', cursive;
+    /* 글자중앙 */
+    text-align: center;
+    /* 글자크기 */
+    font-size: 35px;
+    color: lime;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+/* 2-2-2. 로봇정보출처 */
+.dcbx small {
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 2px;
+    /* 블록으로 변경(텍스트중앙적용위해 */
+    display: block;
+    /* 텍스트 중앙 */
+    text-align: center;
+    /* 글자색 */
+    color: #ff0;
+    /* 글자크기 */
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* 2-2-3. 설명문단 */
+.dcbx p {
+    font-family: 'Hi Melody', cursive;
+    font-size: 17px;
+    /* 줄간격 */
+    line-height: 1.5;
+    /* 자간 */
+    letter-spacing: 1px;
+    /* 단어간격 */
+    word-spacing: 2px;
+
+    /* 가독성을 위한 다단설정 */
+    /* 다단표시(다중열속성 */
+
+    /* 다중열 개수 */
+    column-count: 3;
+    /* 다중열 구분선 */
+    column-rule: 5px dotted lightgreen;
+    /* 보더셋팅과 유사함
+    두께 종류 색상(두종색) */
+
+    /* 다중열 사이간격 */
+    column-gap: justify ;
+    /* 단어깨기
+    break-all 모든단어깨기 */
+    word-break: break-all;
+    /* 단어를 깨는 이유는
+    단어단위로 줄바꿈이 되는 
+    1byte문자인 영어인 경우
+    단어단위로 모두 깨줘야 양쪽정렬시 중간 공백이
+    생기지 않는다.
+    (한글과 같은 2byte문자는 
+    단어깨기를 안해도 모두 
+    떨어진다. */
+
+    /* 첫글자 들여쓰기 ti*/
+    text-indent: 20px;
+}
+/* 설명문단 첫글자 가상요소로 
+글자 디자인 변경하기 */
+.dcbx p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    color: pink;
+}
+
+.info{
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    /* 글자: 스두크/줄체 */
+    font: 30px 'Gugi';
+    text-shadow: 2px 2px 2px #000;
+    /* 배경색 검정반투명 */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 가상요소로 아이콘 넣기 */
+.info span::before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: pink url(../images/robot_03.png) no-repeat;
+    /* 셋팅한 background 아래에
+    쓰면 덮어써진다. */
+    background-position: -11px 2px;
+    background-size: 60px;
+
+    border-radius: 50%;
+    border: 2px solid #ccc;
+
+    /* 인라인요소간 세로정렬 */
+    vertical-align: -5px;
+    margin-right: 1px;
 }
