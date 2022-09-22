@@ -8,9 +8,9 @@
 @import url(common.css);
 
 /* 공사중 표시 */
-body * {
+/* body * {
     outline: 2px dashed gray;
-}
+} */
 
 /* 컨텐츠 파트 최상위부모 */
 body{
@@ -71,6 +71,22 @@ body{
     /* 블록박스 옆으로 흐르게 */
     float: left;
     /* left값은 "나는왼쪽에 너는 오른쪽에 올라와!" */
+    
+    /* 레러티브 포지션 - 부모자격(.cd) */
+    position: relative;
+}
+
+/* 캐릭터 이미지 박스 */
+.ci{
+    /* 하단패딩 */
+    padding-bottom: 15px;
+    /* 트랜지션: 속시이지 trs */
+transition: margin-top .4s ease-out;
+}
+
+/* 캐릭터박스에 마우스 오버시 .ci 마진탑변경 */
+.cat:hover .ci{
+    margin-top: -50%;
 }
 
 /* 캐릭터 이미지 */
@@ -127,8 +143,14 @@ width: 100%;
 
 /* 캐릭터 설명박스 */
 .cd{
+    position: absolute;
+    /* 위치에 대하여 젠틀앱솔루트 */
+    /* 가로크기 설정안한 경우 auto이며
+    이는 앱솔루트일때 부모를 찾음 
+    -> .cat 부모자격 부여 */
+    
     /* 높이값 설정 */
-    height: 250px;
+    height: 0; /* -> .cat에 마우스 오버시 250px; */
     /* 넘치는 내용요소 자동스크롤 */
     overflow: auto;
     /* 
@@ -142,9 +164,24 @@ width: 100%;
     /* 배경: 색이반고윙/크 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 
-    /* 마진 상단 mt */
-    margin-top: 15px;
+    /* 트랜지션: 속시이지 trs */
+    transition: height .4s ease-out;
+
+    padding-bottom: 0px;
+    
+
+    /* 마진 상단 mt  -> 오버시 떨림문제 
+    -> .ci 하단패딩대체*/
+    /* margin-top: 15px; */
+
+    border-radius: 20px 5px 5px 20px;
 }
+
+    /* 캐릭터박스에 오버시 .cd 높이값 변경 */
+    .cat:hover .cd{
+        height: 250px;
+    }
+    
 
 /* 캐릭터 설명 타이틀 */
 .cd h3{
