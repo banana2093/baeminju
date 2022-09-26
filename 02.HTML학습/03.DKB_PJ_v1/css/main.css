@@ -186,10 +186,11 @@ width: 100%;
 /* 캐릭터 설명 타이틀 */
 .cd h3{
     font-family:  'Nanum Myeongjo', serif ;
-    font-size: 24px;
+    font-size: min(1.9vw,24px);
     font-weight: normal;
     /* 패딩: 위 15 양쪽 10 아래 5 */
-    padding: 15px 10px 5px;
+    /* 패딩: 위 15px didWhr 1vw(최대값10px) 아래 5px */
+    padding: 15px min(1vw,10px) 5px;
     /* 자간 ls */
     letter-spacing: -1px;
 }
@@ -197,10 +198,10 @@ width: 100%;
 /* 캐릭터 설명 문단 */
 .cd p{
     font-family: 'Noto Sans KR', 'Noto Serif SC';
-    font-size: 16px;
+    font-size: min(1.1vw,16px);
     /* 줄간격 lh */
     line-height: 1.4;
-    padding: 10px;
+    padding: min(1.8vw,10px);
     /* 양쪽정렬 test-align: justify */
     text-align: justify;
 }
