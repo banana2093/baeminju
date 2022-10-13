@@ -171,19 +171,21 @@ body{
     }
 }
 
-
+/* 이벤트 처리박스 */
 .evt{
     top: 0;
     left: 0;
     position: fixed;
-    width: 100vw;
+      /* 애니후 width: 100vw변경(JS에서) */
+    width:0;
     height: 100vh;
+    /* 플렉스박스 */
     display: flex;
 }
 
 /* 등분할 박스 */
 .evt div{
     flex: 1;
-    outline: 2px dashed blue;
-    background-color: rgba(255,0,0,0.509);
+    /* outline: 2px dashed blue;
+    background-color: rgba(255,0,0,0.509); */
 }
