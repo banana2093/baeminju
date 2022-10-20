@@ -1,12 +1,11 @@
 @charset "utf-8";
-/* 도깨비 PJ 로그인 페이지 CSS - board.css */
-/* 로그인 페이지에만 적용되는 CSS */
+/* 도깨비 PJ 시청자게시판 페이지 CSS - board.css */
+/* 시청자게시판 페이지에만 적용되는 CSS */
 
 /* 외부 CSS합치기 */
 @import url(reset.css);
 @import url(core.css);
 @import url(common.css);
-
 
 /* 공사중 표시 */
 /* body * {
@@ -23,6 +22,7 @@
 .cont{
     /* 최소높이설정 : 내용넘칠경우 자동auto */
     min-height: 600px;
+    padding: 10px;
 }
 
 /* 1. 타이틀 */
@@ -59,14 +59,24 @@
 /* 드라마 리스트 테이블 */
 #drama{
     /* 글자크기 fz */
-    font-size: 2rem;
+    font-size: 1.8rem;
     /* 블록or테이블 가로중앙정렬 - 마.영.오! */
     margin: 0 auto;
     /* 가로크기 w */
     width: 95%;
     /* 테이블 width지정이 없으면 내용만큼 늘어남!
     좁으면 아래로 내용이 줄바꿈됨 */
+
+    /* 모두 중앙정렬 - 제목 데이터부분은 왼쪽정렬임! */
+    text-align: center;
 }
+/* 제목 데이터 부분(2번째 td) */
+#drama tbody tr td:nth-child(2){
+    /* 왼쪽정렬 */
+    text-align: left;
+}
+
+
 /* 테이블 제목 */
 #drama caption{
     /* 글자크기 fz */
@@ -135,7 +145,7 @@
 /* 드라마명 오버시 */
 #drama tbody a:hover {
     /* 글자색 c */
-    color: green;
+    color: hotpink;
     /* 글자데코 : 밑줄 tdu */
     text-decoration: underline;
     /* 글자데코 스타일 : 물결모양 */
@@ -152,5 +162,5 @@
 /* 하단 페이징 오버시 */
 #drama tfoot a:hover {
     /* 글자색 c */
-    color: blue;
+    color: blueviolet;
 }

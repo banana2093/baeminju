@@ -2,24 +2,17 @@
 /* 도깨비 PJ 공통클래스/웹폰트 CSS - core.css */
 
 /* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
 /* 
-   1. 캐릭터 설명 제목체
-     font-family: 'Nanum Myeongjo', serif;
-
-   2.캐릭터 설명 내용체
-    font-family: 'Noto Sans KR', sans-serif;
-
-    3. 한자
-    font-family: 'Noto Serif SC', serif;
-
-   4. 전체 공통체(메뉴 등)
+    1. 캐릭터 설명 제목체
+    font-family: 'Gugi', cursive;
+    2. 캐릭터 설명 내용체
+    font-family: 'Single Day', cursive;
+    3. 캐릭터 설명 한자체
+    font-family: 'ZCOOL KuaiLe', cursive;
+    4. 전체 공통체(메뉴 등)
     font-family: 'Nanum Gothic', sans-serif;
 */
-
 
 /* 전체 글자크기 Root 셋팅! */
 html{
