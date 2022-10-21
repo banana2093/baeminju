@@ -96,6 +96,17 @@ font-family: 'Roboto Condensed', sans-serif;
   */
 }
 
+/* .pt1 하위 .cbx만 높이값 100%설정 */
+.pt1 .cbx{
+  height: 100%;
+}
+
+/* 2-7. 배경공통 적용 클래스 */
+.bgi{
+  background: ;
+}
+
+
 
 /* 비율유지 속박스
 - 가상요소 속박스가 패딩탑으로
