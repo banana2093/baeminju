@@ -15,12 +15,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css"
     />
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- 공통 JS 호출 -->
+    <script src="./js/common.js"></script>
     <!-- 메인CSS -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- 1. 상단영역 -->
-    <div id="top">
+    <div id="top" class="on">
       <header class="top ibx">
         <!-- 1-1.상단메뉴 -->
         <div class="tmenu">
@@ -91,7 +96,7 @@
       </header>
     </div>
     <!-- 2. 메인영역 -->
-    <div id="cont">
+    <div id="cont" class="bgc">
       <main class="cont ibx">
         <!-- 유형1:컨텐츠박스1 -->
         <section class="pt1 rbx">
@@ -176,7 +181,7 @@
       </main>
     </div>
     <!-- 3. 하단영역 -->
-    <div id="info">
+    <div id="info" class="bgc">
       <footer class="info ibx">
         <!-- 하단로고 -->
         <div class="blogo">
