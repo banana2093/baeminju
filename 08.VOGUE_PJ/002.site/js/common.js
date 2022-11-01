@@ -68,18 +68,21 @@ $(() => {
       topA.addClass("on");
       // addClass(클래스명) - 클래스넣기
 
-      // 스크롤 방향에 따라 .up추가/제거
+      // 스크롤 방향에 따라 top값 변경
       if (scTop > lastSc) {
-        // #top의 높이값
+        // 숨기기
+        // #top의 높이값(동적으로 높이값 설정!)
         let temp = topA.innerHeight();
         // 스크롤 아랫방향
-        topA.removeClass("up").css({ top: -temp + "px" });
-        console.log(temp);
+        topA.css({ top: -temp + "px" });
+        // console.log(temp);
         // height() - 패딩이 빠진 순수높이값
         // innerHeight() - 패딩포함 내부높이값
-      } /// if ///
-      else {
-        topA.addClass("up").css({ top: "0" });
+    } ///// if ////
+    else {
+      // 보이기
+      // 스크롤 윗방향
+      topA.css({ top: "0" });
       } /// else ///
     } /////////////scTop >= 100// if ///////////
     else {
